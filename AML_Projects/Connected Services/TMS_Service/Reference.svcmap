@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c3cc0046-e167-4890-8f43-d943e7153e16" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.111/MafilService/TMS_Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TMS_Service.xsd" MetadataType="Schema" ID="15fc5056-e249-4011-9925-9881d0c9ef13" SourceId="1" SourceUrl="http://10.0.0.111/MafilService/TMS_Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="TMS_Service1.xsd" MetadataType="Schema" ID="00448113-55e4-427b-9963-cac4f385ecf8" SourceId="1" SourceUrl="http://10.0.0.111/MafilService/TMS_Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="TMS_Service2.xsd" MetadataType="Schema" ID="8d014946-d389-4ee6-912f-1e827c47f571" SourceId="1" SourceUrl="http://10.0.0.111/MafilService/TMS_Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="TMS_Service.wsdl" MetadataType="Wsdl" ID="5994b411-1fba-44ca-9432-690abf3b9b4c" SourceId="1" SourceUrl="http://10.0.0.111/MafilService/TMS_Service.svc?wsdl" />
+    <MetadataFile FileName="TMS_Service.disco" MetadataType="Disco" ID="60d7b8fa-0167-47d0-b98c-00d221a74baf" SourceId="1" SourceUrl="http://10.0.0.111/MafilService/TMS_Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

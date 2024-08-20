@@ -1,0 +1,43 @@
+﻿
+
+
+
+#tblticket tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 1150px;
+    border-spacing: 0px 0px;
+    overflow-x: hidden;
+}
+
+
+#ticket_dtl thead tr {
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    /*border-top-left-radius: 50px;
+    border-top-right-radius: 50px;*/
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#ticket_dtl tr {
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 50px 50px 50px 50px;
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#ticket_dtl td {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#ticket_dtl tbody tr:hover {
+    background-color: antiquewhite;
+    cursor:pointer;
+}

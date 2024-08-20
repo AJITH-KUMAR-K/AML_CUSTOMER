@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="881b4d43-349c-4d9e-8347-cc814b865066" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.111/ITSMservice/ITSM.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ITSM.wsdl" MetadataType="Wsdl" ID="b28002fb-7224-4359-b7d9-cb361a6d7075" SourceId="1" SourceUrl="http://10.0.0.111/ITSMservice/ITSM.svc?wsdl" />
+    <MetadataFile FileName="ITSM.xsd" MetadataType="Schema" ID="647d02ef-390b-47a5-b4af-ad145dee86a2" SourceId="1" SourceUrl="http://10.0.0.111/ITSMservice/ITSM.svc?xsd=xsd1" />
+    <MetadataFile FileName="ITSM1.xsd" MetadataType="Schema" ID="fb129591-89b4-4874-841c-5ff1940a9c3d" SourceId="1" SourceUrl="http://10.0.0.111/ITSMservice/ITSM.svc?xsd=xsd0" />
+    <MetadataFile FileName="ITSM2.xsd" MetadataType="Schema" ID="9d95e3a8-1a12-42f8-9c17-2df030ece665" SourceId="1" SourceUrl="http://10.0.0.111/ITSMservice/ITSM.svc?xsd=xsd2" />
+    <MetadataFile FileName="ITSM.disco" MetadataType="Disco" ID="d66ce3a0-ed8e-4de9-8c05-8ae34d730ae6" SourceId="1" SourceUrl="http://10.0.0.111/ITSMservice/ITSM.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

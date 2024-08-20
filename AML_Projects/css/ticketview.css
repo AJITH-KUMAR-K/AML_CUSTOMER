@@ -1,0 +1,94 @@
+﻿
+
+
+
+#tblticket tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 1135px;
+    border-spacing: 0px 0px;
+    overflow-x: hidden;
+}
+
+
+#tblticket thead tr {
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    /*border-top-left-radius: 50px;
+    border-top-right-radius: 50px;*/
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#tblticket tr {
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 50px 50px 50px 50px;
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#tblticket td {
+    display: inline-block;
+    width: 140px;
+    height: 28px;
+    overflow: hidden;
+}
+
+#tblticket tbody tr:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+#tblticket tbody tr:active {
+    background-color: coral;
+}
+
+/*table approver list*/
+#tblapprv tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 1150px;
+    border-spacing: 0px 0px;
+    overflow-x: hidden;
+}
+
+
+#tblapprv thead tr {
+    display: block;
+    background-color: burlywood;
+    color: white;
+    /*border-top-left-radius: 50px;
+    border-top-right-radius: 50px;*/
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#tblapprv tr {
+    display: inline-block;
+    background-color: whitesmoke;
+    /*border-radius: 50px 50px 50px 50px;*/
+    margin: 3px 3px;
+    width: 1150px;
+}
+
+#tblapprv td {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    overflow: hidden;
+}
+
+/*.crdstyle:hover {
+    background-color:antiquewhite;
+    cursor: pointer;
+}*/
+
+/*.table-responsive{
+    overflow-x:hidden;
+
+}*/
+

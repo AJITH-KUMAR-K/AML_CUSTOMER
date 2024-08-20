@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'PT Serif', serif;
+}
+
+textarea {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  width: 200px;
+}
+
+#wordCanv {
+  display: none;
+}

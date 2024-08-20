@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="empcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestServiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryFillData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PageVal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PagePara" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PagePar1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryFillDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TreasuryFillDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TresuryConfirmations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PagePara" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PagePara1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PagePar2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TresuryConfirmationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TresuryConfirmationsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryFillingData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PageVal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ParVal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryFillingDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TreasuryFillingDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryConfirm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Param" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PageValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreasuryConfirmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TreasuryConfirmResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11F181E9-047E-495E-8CAD-743CD564B259}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AML_Projects</RootNamespace>
+    <AssemblyName>AML_Projects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="GHelper">
+      <HintPath>..\..\HO_Apps\HoApps\bin\GHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Helper">
+      <HintPath>C:\Users\314706\Desktop\Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlertVerificationReport.aspx" />
+    <Content Include="AmlAuditVerification.aspx" />
+    <Content Include="Aml_Currency_Updation.aspx" />
+    <Content Include="AML_Sanction_Report.aspx" />
+    <Content Include="App_Themes\Theme\assets\css\TMSmain.css" />
+    <Content Include="App_Themes\Theme\assets\css\StyleAutoComplete.css" />
+    <Content Include="App_Themes\Theme\assets\js\AddFI.js" />
+    <Content Include="App_Themes\Theme\assets\js\AlertVerifyReport.js" />
+    <Content Include="App_Themes\Theme\assets\js\AmlAuditVerification.js" />
+    <Content Include="App_Themes\Theme\assets\js\Aml_Currency_Updation.js" />
+    <Content Include="App_Themes\Theme\assets\js\AML_Sanction_Report.js" />
+    <Content Include="App_Themes\Theme\assets\js\AutoCompleteJS.js" />
+    <Content Include="App_Themes\Theme\assets\js\exel_export_sanction.js" />
+    <Content Include="App_Themes\Theme\assets\js\LoanApprove.js" />
+    <Content Include="App_Themes\Theme\assets\js\loanavailment.js" />
+    <Content Include="App_Themes\Theme\assets\js\LoanMaster.js" />
+    <Content Include="App_Themes\Theme\assets\js\LoanRePayment.js" />
+    <Content Include="App_Themes\Theme\assets\js\ProcessingFee.js" />
+    <Content Include="App_Themes\Theme\assets\js\SRAutoCompleteJS.js" />
+    <Content Include="App_Themes\Theme\assets\js\TMSLoanMaster.js" />
+    <Content Include="App_Themes\Theme\assets\js\TreasuryHoliday.js" />
+    <Content Include="bin\AML_Projects.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Connected Services\Aml_Customer_Services\cust_services.disco" />
+    <None Include="Connected Services\Aml_Customer_Services\configuration91.svcinfo" />
+    <None Include="Connected Services\Aml_Customer_Services\configuration.svcinfo" />
+    <None Include="Connected Services\Aml_Customer_Services\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="bin\AML_Projects.dll" />
+    <Content Include="bin\AML_Projects.pdb" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\ClosedXML.pdb" />
+    <Content Include="bin\ClosedXML.xml" />
+    <Content Include="bin\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\de\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\de\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.xml" />
+    <Content Include="bin\EnvDTE.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\ExcelNumberFormat.dll" />
+    <Content Include="bin\ExcelNumberFormat.xml" />
+    <Content Include="bin\FastMember.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\GHelper.dll" />
+    <Content Include="bin\Helper.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.MSXML.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Design.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebDesign.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\Microsoft.SqlServer.Types.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="bin\PHelper.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="bin\SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="bin\SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="bin\SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <Content Include="bin\stdole.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="demo.aspx" />
+    <Content Include="Err_Page.aspx" />
+    <Content Include="Exel_export_sanction.aspx" />
+    <Content Include="IMAGES\13146-removebg-preview.png" />
+    <Content Include="IMAGES\BG.png" />
+    <Content Include="IMAGES\Bg_img.png" />
+    <Content Include="IMAGES\hand-drawn-bankruptcy-illustrated.png" />
+    <Content Include="IMAGES\rb-dark-blue-texture.jpg" />
+    <Content Include="img\bgImage.jpg" />
+    <Content Include="img\Manappuram.png" />
+    <Content Include="img\ManappuramLogo.png" />
+    <Content Include="js\Allocationapproval.js" />
+    <Content Include="js\alloemp_rpt.js" />
+    <Content Include="js\allosoft_req.js" />
+    <Content Include="js\allo_register.js" />
+    <Content Include="js\ChangeRequestReport.js" />
+    <Content Include="js\Crbreport.js" />
+    <Content Include="js\digi_report.js" />
+    <Content Include="js\feedback1.js" />
+    <Content Include="js\global_report.js" />
+    <Content Include="js\IncidentReport.js" />
+    <Content Include="js\ManualAssign.js" />
+    <Content Include="js\PMActivityApproval.js" />
+    <Content Include="js\PmPopup.js" />
+    <Content Include="js\userfeedback.js" />
+    <Content Include="js\woreportjs.js" />
+    <Content Include="js\woreportviewjs.js" />
+    <Content Include="servicerequestjs.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <None Include="Connected Services\Aml_Customer_Services\cust_services.wsdl" />
+    <None Include="Connected Services\Aml_Customer_Services\cust_services.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Aml_Customer_Services\cust_services1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Aml_Customer_Services\cust_services2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITSM_Service\ITSM.wsdl" />
+    <None Include="Connected Services\ITSM_Service\ITSM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITSM_Service\ITSM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITSM_Service\ITSM2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TMS_Service\TMS_Service.disco" />
+    <None Include="Connected Services\TMS_Service\configuration91.svcinfo" />
+    <None Include="Connected Services\TMS_Service\configuration.svcinfo" />
+    <None Include="Connected Services\TMS_Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ITSM_Service\ITSM.disco" />
+    <None Include="Connected Services\ITSM_Service\configuration91.svcinfo" />
+    <None Include="Connected Services\ITSM_Service\configuration.svcinfo" />
+    <None Include="Connected Services\ITSM_Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="css\style_min_new.css" />
+    <Content Include="img\manappuram_50.png" />
+    <Content Include="js\activeassetreportjs.js" />
+    <Content Include="js\activeassetsearchjs.js" />
+    <Content Include="js\AssetApprovalViewjs.js" />
+    <Content Include="js\assettransferapproval.js" />
+    <Content Include="js\assettransferjs.js" />
+    <Content Include="js\AssRitcapprvjs.js" />
+    <Content Include="js\BHAssetmanagement.js" />
+    <Content Include="js\loanavailment.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\PendingDumpReport.js" />
+    <Content Include="js\reportasstupdationjs.js" />
+    <Content Include="js\ritcworder2js.js" />
+    <Content Include="js\userupdationreportjs.js" />
+    <Content Include="css\CRapproval.css" />
+    <Content Include="css\CRBreview.css" />
+    <Content Include="css\crcreation.css" />
+    <Content Include="css\dataTableCSS.css" />
+    <Content Include="css\IncidentCreation.css" />
+    <Content Include="css\ServiceRequest.css" />
+    <Content Include="css\SRapprove.css" />
+    <Content Include="css\ticketview.css" />
+    <Content Include="files\img\click_orig.png" />
+    <Content Include="IMAGES\data retrivel.txt" />
+    <Content Include="IMAGES\error-bg.jpg" />
+    <Content Include="js\adminmodule.js" />
+    <Content Include="js\ApproveNcdBondAvailment.js" />
+    <Content Include="js\Assetmanagement.js" />
+    <Content Include="js\assetmntupdation.js" />
+    <Content Include="js\userudationjs.js" />
+    <Content Include="js\AssetstsUpdationsjs.js" />
+    <Content Include="js\AssetViewjs.js" />
+    <Content Include="js\AutoCompleteJS1.js" />
+    <Content Include="js\Binownerjs.js" />
+    <Content Include="js\chart.js" />
+    <Content Include="js\CRapproval.js" />
+    <Content Include="js\crbreviewjs.js" />
+    <Content Include="js\crcreation.js" />
+    <Content Include="js\FundTransferAppv.js" />
+    <Content Include="js\globalticketjs.js" />
+    <Content Include="js\GlobaltktView.js" />
+    <Content Include="js\home.js" />
+    <Content Include="js\LoanRePayment.js" />
+    <Content Include="js\LoanRepaymentCC.js" />
+    <Content Include="js\mass.js" />
+    <Content Include="js\MS114js.js" />
+    <Content Include="js\ncdbondavailment.js" />
+    <Content Include="js\ProblemTicket.js" />
+    <Content Include="js\ProblemTkt.js" />
+    <Content Include="js\ProblemTktUp.js" />
+    <Content Include="js\ProblemTktUpdation.js" />
+    <Content Include="js\Releaseapprove.js" />
+    <Content Include="js\ReleaseRequest.js" />
+    <Content Include="js\ReleaseRequestupdate.js" />
+    <Content Include="js\servicerequestjs.js" />
+    <Content Include="js\softwarediscoveryrpt.js" />
+    <Content Include="js\SR.js" />
+    <Content Include="js\SRAppl.js" />
+    <Content Include="js\SRApproval.js" />
+    <Content Include="js\SRAutoCompleteJS1.js" />
+    <Content Include="js\SRcreation.js" />
+    <Content Include="js\tickettable.js" />
+    <Content Include="js\tmsDeposit.js" />
+    <Content Include="js\tmsDepositApproval.js" />
+    <Content Include="js\tmsDepositClosure.js" />
+    <Content Include="js\TreasuryReport.js" />
+    <Content Include="js\UsdReport.js" />
+    <Content Include="js\ViewDoc.js" />
+    <Content Include="Content\angular-material.css" />
+    <Content Include="Content\angular-material.layout-attributes.css" />
+    <Content Include="Content\angular-material.layout-attributes.min.css" />
+    <Content Include="Content\angular-material.layouts.css" />
+    <Content Include="Content\angular-material.layouts.ie_fixes.css" />
+    <Content Include="Content\angular-material.layouts.min.css" />
+    <Content Include="Content\angular-material.min.css" />
+    <Content Include="css\accordian.css" />
+    <Content Include="css\c3.min.css" />
+    <Content Include="css\css-chart.css" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="css\icons\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="css\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="css\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="css\jquery-jvectormap-2.0.2.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="css\uploadfile.css" />
+    <Content Include="icons\menu.png" />
+    <Content Include="img\custom-select.png" />
+    <Content Include="img\error-bg.jpg" />
+    <Content Include="img\img5.png" />
+    <Content Include="img\sidebarbg.png" />
+    <Content Include="js\ApproveLoanAvailment.js" />
+    <Content Include="js\ApproveNewFund.js" />
+    <Content Include="js\jquery.min.1.11.1.js" />
+    <Content Include="js\jquery.table2excel.js" />
+    <Content Include="js\jquery.table2excel.min.js" />
+    <Content Include="js\jquery.uploadfile.min.js" />
+    <Content Include="js\jszip.js" />
+    <Content Include="js\ProcessingFee.js" />
+    <Content Include="js\TreasuryHoliday.js" />
+    <Content Include="js\UploadFile.js" />
+    <Content Include="js\xls.core.min.js" />
+    <Content Include="js\xlsx.core.min.js" />
+    <Content Include="manappuram7.png" />
+    <Content Include="ServiceRequest.aspx" />
+    <Content Include="ServiceViewDoc.asmx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\uploadify.css" />
+    <Content Include="files\img\desktop\slider\bgslide-1.svg" />
+    <Content Include="files\img\favicon-16x16.png" />
+    <Content Include="files\img\logo.png" />
+    <Content Include="files\img\logo_name.png" />
+    <Content Include="files\img\logo_small.png" />
+    <Content Include="files\img\manappuram_50.png" />
+    <Content Include="files\js\libs\fclick.js" />
+    <Content Include="files\js\libs\jquery-2.2.2.min.js" />
+    <Content Include="files\js\libs\js.cookie.js" />
+    <Content Include="files\js\libs\parallax.min.js" />
+    <Content Include="files\js\libs\svg-injector.min.js" />
+    <Content Include="files\js\libs\svgfixer.js" />
+    <Content Include="files\js\main.js" />
+    <Content Include="files\js\plugins\lamp.animation.js" />
+    <Content Include="files\js\plugins\swiper.jquery.min.js" />
+    <Content Include="files\js\sea.js" />
+    <Content Include="css\main.css" />
+    <Content Include="css\main2.css" />
+    <Content Include="css\New Text Document.txt" />
+    <Content Include="files\css\styles.css" />
+    <Content Include="files\img\svgsprite.svg" />
+    <Content Include="files\js\libs\modernizr-custom.js" />
+    <Content Include="home.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="jquery.aspx" />
+    <Content Include="jquerytest.aspx" />
+    <Content Include="jquerytest.js" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="js\animate.js" />
+    <Content Include="js\app-style-switcher.js" />
+    <Content Include="js\app.init.light-sidebar.js" />
+    <Content Include="js\app.min.js" />
+    <Content Include="js\ApproveFI.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\c3.min.js" />
+    <Content Include="js\Chart.min.js" />
+    <Content Include="js\custom.min.js" />
+    <Content Include="js\d3.min.js" />
+    <Content Include="js\dashboard2.js" />
+    <Content Include="js\echarts\echarts-en.min.js" />
+    <Content Include="js\echarts\pie-doghnut.js" />
+    <Content Include="js\excanvas.min.js" />
+    <Content Include="js\gauge.min.js" />
+    <Content Include="js\head.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.flot.js" />
+    <Content Include="js\jquery.flot.tooltip.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\libs\fclick.js" />
+    <Content Include="js\libs\jquery-2.2.2.min.js" />
+    <Content Include="js\libs\js.cookie.js" />
+    <Content Include="js\libs\parallax.min.js" />
+    <Content Include="js\libs\svg-injector.min.js" />
+    <Content Include="js\libs\svgfixer.js" />
+    <Content Include="js\main1.js" />
+    <Content Include="js\modernizr-custom.js" />
+    <Content Include="js\newfi.js" />
+    <Content Include="js\newfund.js" />
+    <Content Include="js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="js\plugins\lamp.animation.js" />
+    <Content Include="js\plugins\swiper.jquery.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\sidebarmenu.js" />
+    <Content Include="js\sparkline.js" />
+    <Content Include="js\uploadify-cancel.png" />
+    <Content Include="js\validation.js" />
+    <Content Include="js\waves.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="logincheck.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-aria.js" />
+    <Content Include="Scripts\angular-aria.min.js" />
+    <Content Include="Scripts\angular-material-mocks.js" />
+    <Content Include="Scripts\angular-material.js" />
+    <Content Include="Scripts\angular-material.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery.uploadify.js" />
+    <Content Include="Scripts\uploader.swf" />
+    <Content Include="Scripts\uploadify.swf" />
+    <Content Include="ServiceAutoComplete.asmx" />
+    <Content Include="SessionCheck.aspx" />
+    <Content Include="SessionExpired.aspx" />
+    <Content Include="svg\bgslide-1.svg" />
+    <Content Include="svg\wave.svg" />
+    <Content Include="Treasury\AddPirticulars.aspx" />
+    <Content Include="js\UsdRateUpdation.js" />
+    <None Include="Connected Services\TMS_Service\TMS_Service.wsdl" />
+    <None Include="Connected Services\TMS_Service\TMS_Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TMS_Service\TMS_Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TMS_Service\TMS_Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile10.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile12.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile13.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile14.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile6.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile7.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile8.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile9.pubxml" />
+    <Content Include="uploads\AML_TEST.xls" />
+    <Content Include="uploads\Blacklist_TEST.xls" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertVerificationReport.aspx.cs">
+      <DependentUpon>AlertVerificationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlertVerificationReport.aspx.designer.cs">
+      <DependentUpon>AlertVerificationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmlAuditVerification.aspx.cs">
+      <DependentUpon>AmlAuditVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AmlAuditVerification.aspx.designer.cs">
+      <DependentUpon>AmlAuditVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aml_Currency_Updation.aspx.cs">
+      <DependentUpon>Aml_Currency_Updation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aml_Currency_Updation.aspx.designer.cs">
+      <DependentUpon>Aml_Currency_Updation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AML_Sanction_Report.aspx.cs">
+      <DependentUpon>AML_Sanction_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AML_Sanction_Report.aspx.designer.cs">
+      <DependentUpon>AML_Sanction_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Aml_Customer_Services\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ITSM_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TMS_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Err_Page.aspx.cs">
+      <DependentUpon>Err_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Err_Page.aspx.designer.cs">
+      <DependentUpon>Err_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exel_export_sanction.aspx.cs">
+      <DependentUpon>Exel_export_sanction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exel_export_sanction.aspx.designer.cs">
+      <DependentUpon>Exel_export_sanction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PdfWriter.cs" />
+    <Compile Include="CommonService\CommonServiceClient.cs" />
+    <Compile Include="DSstatement.cs">
+      <DependentUpon>DSstatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSstatement1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSstatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jquery.aspx.cs">
+      <DependentUpon>jquery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jquery.aspx.designer.cs">
+      <DependentUpon>jquery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jquery.Master.cs">
+      <DependentUpon>jquery.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jquery.Master.designer.cs">
+      <DependentUpon>jquery.Master</DependentUpon>
+    </Compile>
+    <Compile Include="jquerytest.aspx.cs">
+      <DependentUpon>jquerytest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jquerytest.aspx.designer.cs">
+      <DependentUpon>jquerytest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logincheck.aspx.cs">
+      <DependentUpon>logincheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logincheck.aspx.designer.cs">
+      <DependentUpon>logincheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceAutoComplete.asmx.cs">
+      <DependentUpon>ServiceAutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceRequest.aspx.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceRequest.aspx.designer.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceViewDoc.asmx.cs">
+      <DependentUpon>ServiceViewDoc.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SessionCheck.aspx.cs">
+      <DependentUpon>SessionCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionCheck.aspx.designer.cs">
+      <DependentUpon>SessionCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionExpired.aspx.cs">
+      <DependentUpon>SessionExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionExpired.aspx.designer.cs">
+      <DependentUpon>SessionExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Treasury\AddPirticulars.aspx.cs">
+      <DependentUpon>AddPirticulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Treasury\AddPirticulars.aspx.designer.cs">
+      <DependentUpon>AddPirticulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\OpenSans-Bold-webfont.eot" />
+    <Content Include="fonts\OpenSans-Bold-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Bold-webfont.woff" />
+    <Content Include="fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Regular-webfont.woff" />
+    <Content Include="Main.Master" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="css\icons\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="css\icons\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="css\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="css\icons\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="css\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="css\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="css\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="css\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="css\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="css\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="css\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="css\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="jquery.Master" />
+    <Content Include="css\CooperBlackRegular.ttf" />
+    <Content Include="icons\fa-brands-400.ttf" />
+    <Content Include="js\xlsx.full.min" />
+    <Content Include="DSstatement.xsc">
+      <DependentUpon>DSstatement.xsd</DependentUpon>
+    </Content>
+    <None Include="DSstatement.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSstatement1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DSstatement.xss">
+      <DependentUpon>DSstatement.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular-aria.min.js.map" />
+    <Content Include="Scripts\uploader.fla" />
+    <Content Include="uploads\demo.xlsx" />
+    <Content Include="scss\style.scss" />
+    <Content Include="uploads\tms.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\icons\flag-icon-css\flags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Aml_Customer_Services\" />
+    <WCFMetadataStorage Include="Connected Services\ITSM_Service\" />
+    <WCFMetadataStorage Include="Connected Services\TMS_Service\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61053</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61053/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

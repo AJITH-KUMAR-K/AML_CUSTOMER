@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSstatement" targetNamespace="http://tempuri.org/DSstatement.xsd" xmlns:mstns="http://tempuri.org/DSstatement.xsd" xmlns="http://tempuri.org/DSstatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSstatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSstatement" msprop:Generator_UserDSName="DSstatement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtreport" msprop:Generator_TableClassName="dtreportDataTable" msprop:Generator_TableVarName="tabledtreport" msprop:Generator_RowChangedName="dtreportRowChanged" msprop:Generator_TablePropName="dtreport" msprop:Generator_RowDeletingName="dtreportRowDeleting" msprop:Generator_RowChangingName="dtreportRowChanging" msprop:Generator_RowEvHandlerName="dtreportRowChangeEventHandler" msprop:Generator_RowDeletedName="dtreportRowDeleted" msprop:Generator_RowClassName="dtreportRow" msprop:Generator_UserTableName="dtreport" msprop:Generator_RowEvArgName="dtreportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AMOUNT" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="TRA_DT" msprop:Generator_ColumnVarNameInTable="columnTRA_DT" msprop:Generator_ColumnPropNameInRow="TRA_DT" msprop:Generator_ColumnPropNameInTable="TRA_DTColumn" msprop:Generator_UserColumnName="TRA_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCR" msprop:Generator_ColumnVarNameInTable="columnDESCR" msprop:Generator_ColumnPropNameInRow="DESCR" msprop:Generator_ColumnPropNameInTable="DESCRColumn" msprop:Generator_UserColumnName="DESCR" type="xs:string" minOccurs="0" />
+              <xs:element name="LOAN_BAL" msprop:Generator_ColumnVarNameInTable="columnLOAN_BAL" msprop:Generator_ColumnPropNameInRow="LOAN_BAL" msprop:Generator_ColumnPropNameInTable="LOAN_BALColumn" msprop:Generator_UserColumnName="LOAN_BAL" type="xs:string" minOccurs="0" />
+              <xs:element name="DEBIT" msprop:Generator_ColumnVarNameInTable="columnDEBIT" msprop:Generator_ColumnPropNameInRow="DEBIT" msprop:Generator_ColumnPropNameInTable="DEBITColumn" msprop:Generator_UserColumnName="DEBIT" type="xs:string" minOccurs="0" />
+              <xs:element name="CREDIT" msprop:Generator_ColumnVarNameInTable="columnCREDIT" msprop:Generator_ColumnPropNameInRow="CREDIT" msprop:Generator_ColumnPropNameInTable="CREDITColumn" msprop:Generator_UserColumnName="CREDIT" type="xs:string" minOccurs="0" />
+              <xs:element name="TRANS_ID" msprop:Generator_ColumnVarNameInTable="columnTRANS_ID" msprop:Generator_ColumnPropNameInRow="TRANS_ID" msprop:Generator_ColumnPropNameInTable="TRANS_IDColumn" msprop:Generator_UserColumnName="TRANS_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

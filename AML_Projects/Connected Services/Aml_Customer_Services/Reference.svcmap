@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="38cfa2dc-e8b0-4847-a332-8569e99125a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="cust_services.xsd" MetadataType="Schema" ID="9af79b14-578b-451f-8adc-6c85ddf6d242" SourceId="1" SourceUrl="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc?xsd=xsd2" />
+    <MetadataFile FileName="cust_services.disco" MetadataType="Disco" ID="f9627878-243a-4251-89f4-adcb035d357b" SourceId="1" SourceUrl="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc?disco" />
+    <MetadataFile FileName="cust_services1.xsd" MetadataType="Schema" ID="ebbf4acb-0cf9-4315-984f-ae75da3e38bc" SourceId="1" SourceUrl="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc?xsd=xsd0" />
+    <MetadataFile FileName="cust_services2.xsd" MetadataType="Schema" ID="385eabda-d3b1-42f5-87e1-ba60ae9b7f81" SourceId="1" SourceUrl="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc?xsd=xsd1" />
+    <MetadataFile FileName="cust_services.wsdl" MetadataType="Wsdl" ID="26d01438-019b-40e9-97f8-1419cf30bcae" SourceId="1" SourceUrl="http://hoapps.manappuram.net/Aml_Customer_Services/cust_services.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
